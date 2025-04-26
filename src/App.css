@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  padding: 100px;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--cor-primaria);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+
+
+  --cor-primaria: #4f6367;
+  --cor-primaria-suave: #83a4aa;
+
+  --cor-sombra: #4f63674b;
+
+  --cor-input: #adbfc2;
+
+  --cor-texto: #474e50;
+  --cor-texto-escuro: #6c757d;
+
+  --cor-botao: #4f6367;
+
+
+}
+
+.container {
+  width: 600px;
+  padding: 25px;
+  border-radius: 10px;
+  background-color: var(--cor-primaria-suave);
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+
+.container:last-child {
+  margin-top: 50px;
+}
+
+input {
+  font-weight: 500;
+  font-size: 16px;
+  height: 41px;
+  padding: 0 20px;
+  background-color: var(--cor-input);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  color: var(--cor-texto);
+  transition: border 0.3s, box-shadow 0.3s;
+  /* Transição suave */
+}
+
+input:focus {
+  border: 2px solid var(--cor-primaria);
+  box-shadow: 0 4px 10px var(--cor-sombra);
+  /* Sombra mais sutil */
+}
+
+input::placeholder {
+  color: var(--cor-texto-escuro);
+}
+
+.addTask {
+  font-weight: 500;
+  background-color: var(--cor-botao);
+  padding: 15px 0;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.addTask:hover {
+  background-color: #2c393b;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+li button{
+  font-size: 16px;
+  font-weight: 500;
+  background-color: var(--cor-input);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+}
+
+li button:first-child {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 50px 20px;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
